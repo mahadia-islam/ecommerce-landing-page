@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins",sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ecommerce {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.ecommerce header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ecommerce header .container {
+  max-width: 1224px;
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  .ecommerce header .container {
+    padding: 20px;
+  }
+}
+
+.ecommerce header .container a.logo img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .ecommerce header .container a.logo img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecommerce header .container .navbar {
+    display: none;
+  }
+}
+
+.ecommerce header .container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ecommerce header .container .navbar ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.ecommerce header .container .navbar ul li:hover {
+  border-color: #222;
+}
+
+.ecommerce header .container .navbar ul li a {
+  color: #222;
+}
+
+.ecommerce header .container .navbar ul li a span {
+  position: relative;
+  top: 2px;
+  padding-right: 5px;
+  display: none;
+}
+
+.ecommerce header .container .utils {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ecommerce header .container .utils span {
+  font-size: 1.7em;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ecommerce header .container .utils .menu {
+  font-size: 1.7em;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ecommerce header .container .utils .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecommerce {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.ecommerce .content {
+  max-width: 1224px;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .ecommerce .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+    padding: 0 30px;
+  }
+}
+
+.ecommerce .content .text__container {
+  width: 50%;
+}
+
+.ecommerce .content .text__container h1 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.ecommerce .content .text__container h1 span {
+  -webkit-text-stroke: 2px #000;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .ecommerce .content .text__container h1 {
+    font-size: 2em;
+  }
+}
+
+.ecommerce .content .text__container p {
+  margin: 10px 0;
+  letter-spacing: 5px;
+}
+
+.ecommerce .content .text__container button {
+  padding: 12px 25px;
+  position: relative;
+  margin: 15px 0;
+  border: none;
+  background: #111;
+  color: #fff;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ecommerce .content .text__container button span {
+  position: absolute;
+  background: #fff;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+  pointer-events: none;
+  -webkit-animation: ripple_animate 1s linear infinite;
+          animation: ripple_animate 1s linear infinite;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .ecommerce .content .text__container {
+    width: 100% !important;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.ecommerce .content .img__container {
+  width: 50%;
+  position: relative;
+  text-align: center;
+}
+
+.ecommerce .content .img__container .clip {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: #111;
+  -webkit-clip-path: circle(600px at right 900px);
+  clip-path: circle(564px at right 0px);
+  border-radius: 50%;
+  z-index: -99999;
+}
+
+@media (max-width: 768px) {
+  .ecommerce .content .img__container .clip {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 558px) {
+  .ecommerce .content .img__container .clip {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.ecommerce .content .img__container img {
+  z-index: 999999;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+@media (max-width: 768px) {
+  .ecommerce .content .img__container {
+    width: 100% !important;
+    margin-top: 100px;
+  }
+  .ecommerce .content .img__container img {
+    max-width: 450px;
+    width: 100%;
+  }
+}
+
+.mobile__header {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.mobile__header .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.mobile__header ul {
+  padding-top: 70px;
+}
+
+.mobile__header ul li {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 0.5px solid gray;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mobile__header ul li:hover {
+  background: #111;
+}
+
+.mobile__header ul li:hover a {
+  color: #fff;
+}
+
+.mobile__header ul li a {
+  color: #111;
+  font-size: 14px;
+}
+
+.mobile__header ul li a span {
+  position: relative;
+  top: 2px;
+  right: 2px;
+  font-size: 1em;
+}
+
+@-webkit-keyframes ripple_animate {
+  0% {
+    opacity: 0.2;
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple_animate {
+  0% {
+    opacity: 0.2;
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

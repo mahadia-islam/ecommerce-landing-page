@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Landing Page</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ecommerce">
+        <header>
+            <div class="container">
+                <a href="#" class="logo"><img src="./img/logo.png" alt=""></a>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+                        <li><a href="#"><span><ion-icon name="woman-outline"></ion-icon></span> Women</a></li>
+                        <li><a href="#"><span><ion-icon name="person-outline"></ion-icon></span> Men</a></li>
+                        <li><a href="#"><span><ion-icon name="bookmark-outline"></ion-icon></span> New</a></li>
+                        <li><a href="#"><span><ion-icon name="storefront-outline"></ion-icon></span> Shop</a></li>
+                    </ul>
+                </div>
+                <div class="utils">
+                    <span><ion-icon name="search-outline"></ion-icon></span>
+                    <span><ion-icon name="cart-outline"></ion-icon></span>
+                    <div class="menu"><ion-icon name="grid-outline"></ion-icon></div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="text__container">
+                <h1>Ezzy boost <br> sply - <span>250</span></h1>
+                <p>explore new collection</p>
+                <button class="explore">explore now</button>
+            </div>
+            <div class="img__container">
+                <div class="clip"></div>
+                <img src="./img/imghome.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- mobile header -->
+    <div class="mobile__header">
+        <div class="close"><ion-icon name="close-circle-outline"></ion-icon></div>
+        <ul>
+            <li><a href="#"><span><ion-icon name="home-outline"></ion-icon></span> Home</a></li>
+            <li><a href="#"><span><ion-icon name="woman-outline"></ion-icon></span> Women</a></li>
+            <li><a href="#"><span><ion-icon name="person-outline"></ion-icon></span> Men</a></li>
+            <li><a href="#"><span><ion-icon name="bookmark-outline"></ion-icon></span> New</a></li>
+            <li><a href="#"><span><ion-icon name="storefront-outline"></ion-icon></span> Shop</a></li>
+        </ul>
+    </div>
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".menu").click(() => $(".mobile__header").css({top:"0px"}));
+            $(".close").click(() => $(".mobile__header").css({top:"-100%"}));
+            $(".explore").click(function(e){
+                const x = e.clientX - e.target.offsetLeft;
+                const y = e.clientY - e.target.offsetTop;
+                const ripples = document.createElement("span");
+                ripples.style.left = x + "px";
+                ripples.style.top = y + "px";
+                this.append(ripples);
+                setTimeout(()=> {
+                    ripples.remove();
+                },1000)
+            })
+        })
+    </script>
+</body>
+</html>

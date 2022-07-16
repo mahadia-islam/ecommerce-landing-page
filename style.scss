@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Poppins",sans-serif;
+    box-sizing:border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.ecommerce{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    header{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 15px 20px rgba(0,0,0,0.05);
+        .container{
+            max-width: 1224px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            align-items: center;
+            @media (max-width:768px){
+                padding: 20px;
+            }
+            a.logo{
+                img{
+                    width: 150px;
+                }
+                @media (max-width:768px){
+                    img{
+                        width: 140px;
+                    }
+                }
+            }
+            .navbar{
+                @media (max-width:768px){
+                    display: none;
+                }
+                ul{
+                    display: flex;
+                    li{
+                        padding: 10px 20px;
+                        border-bottom: 1px solid transparent;
+                        cursor: pointer;
+                        transition: 0.5s;
+                        &:hover{
+                            border-color: #222;
+                        }
+                        a{
+                            color: #222;
+                            span{
+                                position: relative;
+                                top: 2px;
+                                padding-right: 5px;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .utils{
+                display: flex;
+                span{
+                    font-size: 1.7em;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                .menu{
+                    font-size: 1.7em;
+                    cursor: pointer;
+                    display: none;
+                    @media (max-width:768px){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width:768px){
+        height: fit-content;
+    }
+    .content{
+        max-width: 1224px;
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width:768px){
+            flex-direction: column;
+            margin-top: 100px;
+            padding: 0 30px;
+        }
+        .text__container{
+            width: 50%;
+            h1{
+                font-size: 4em;
+                font-weight: 900;
+                span{
+                    -webkit-text-stroke: 2px #000;
+                    color: transparent;
+                }
+                @media (max-width:768px){
+                    font-size: 2em;
+                }
+            }
+            p{
+                margin: 10px 0;
+                letter-spacing: 5px;
+            }
+            button{
+                padding: 12px 25px;
+                position: relative;
+                margin: 15px 0;
+                border: none;
+                background: #111;
+                color: #fff;
+                border-radius: 25px;
+                letter-spacing: 2px;
+                cursor: pointer;
+                overflow: hidden;
+                span {
+                    position: absolute;
+                    background: #fff;
+                    transform: translate(-50%, -50%) !important;
+                    pointer-events: none;
+                    animation: ripple_animate 1s linear infinite;
+                    border-radius: 50%;
+                }
+            }
+            @media (max-width:768px) {
+                width: 100% !important;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        .img__container{
+            width: 50%;
+            position: relative;
+            text-align: center;
+            .clip{
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 400px;
+                height: 400px;
+                background: #111;
+                -webkit-clip-path: circle(600px at right 900px);
+                clip-path: circle(564px at right 0px);
+                border-radius: 50%;
+                z-index: -99999;
+                @media (max-width:768px){
+                    // display: none;
+                    width: 400px;
+                    height: 400px;
+                }
+                @media (max-width:558px){
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            img{
+                z-index: 999999;
+                transform: rotate(-25deg);
+            }
+            @media (max-width:768px) {
+                width: 100% !important;
+                margin-top: 100px;
+                img{
+                    max-width:450px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.mobile__header{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transition: .5s;
+    .close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    ul{
+        padding-top: 70px;
+        li{
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 0.5px solid gray;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background: #111;
+            }
+            &:hover a{
+                color: #fff;
+            }
+            a{
+                color: #111;
+                font-size: 14px;
+                span{
+                    position: relative;
+                    top: 2px;
+                    right: 2px;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@keyframes ripple_animate{
+    0%{
+        opacity: 0.2;
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
